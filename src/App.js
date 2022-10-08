@@ -11,14 +11,8 @@ export default function App() {
           console.log(values);
           axios
             .post(
-              "https://sheet.best/api/sheets/ec201f71-904b-42e1-a160-7d554f366d23",
-              {
-                headers: {
-                  "X-Api-Key":
-                    "2y@U!BKz96nGGXDwaG%VkJyu@%DJo0DI9MuYn6Xj7okC1l4icg8ryE1_5XU#G$gf"
-                }
-              },
-              values
+              "https://api.steinhq.com/v1/storages/63418386eced9b09e99ecec3/first",
+              [values]
             )
             .then((data) => console.log(data))
             .catch((error) => {

@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <Formik
-        initialValues={{ Email: "", Name: "" }}
+        initialValues={{ email: "", name: "" }}
         onSubmit={(values) => {
           console.log(values);
           axios
@@ -21,8 +21,8 @@ export default function App() {
         }}
       >
         <Form>
-          <Field type="text" name="Name" placeholder="Enter Name" />
-          <Field type="email" name="Email" placeholder="Enter Email" />
+          <Field type="text" name="name" placeholder="Enter Name" />
+          <Field type="email" name="email" placeholder="Enter Email" />
           <button type="submit">Submit</button>
         </Form>
       </Formik>

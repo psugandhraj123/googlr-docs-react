@@ -7,14 +7,14 @@ export default function App() {
     <div className="App">
       <Formik
         initialValues={{ email: "", name: "" }}
-        onSubmit={(values) => {
-          console.log(values);
+        onSubmit={(values, { resetForm }) => {
+
           axios
             .post(
               "https://api.steinhq.com/v1/storages/63418386eced9b09e99ecec3/first",
               [values]
             )
-            .then((data) => console.log(data))
+            .then((data) => { console.log(data); resetForm() })
             .catch((error) => {
               console.log(error);
             });
